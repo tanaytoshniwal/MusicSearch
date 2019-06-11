@@ -6,12 +6,12 @@ function SideMenu() {
     return (
         <div>
             <nav id="main-menu" className="mdl-navigation pt-0">
-          <div className="container justify-content-center navbg py-3">
+          <div className="container justify-content-center navbg p-0">
               <div className="row justify-content-center p-2">
                   <img src="https://tanaytoshniwal.me/assets/images/icon_favo.jpg" alt="image" className="img-fluid avatar avatar-xxl depth" />
               </div>
               <div className="row justify-content-center my-2">
-                  <span className="title text-center font-pacifico magic-text">Tanay Toshniwal</span>
+                  <span className="title text-center font-pacifico">Tanay Toshniwal</span>
               </div>
           </div>
           <div className="container-fluid p-1">

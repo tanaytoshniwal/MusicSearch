@@ -3,6 +3,7 @@ import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
 import styles from './Head.module.css';
 import SideMenu from './SideMenu';
 import Search from './Search';
+import Cards from './Cards';
 function Head(props) {
     return (
         <div className={styles.height}>
@@ -20,6 +21,7 @@ function Head(props) {
                 </Drawer>
                 <Content>
                     <Search api={props.api} keyword={props.keyword} key_change={props.key_change}/>
+                    <Cards data={props.data} />
                 </Content>
             </Layout>
         </div>
