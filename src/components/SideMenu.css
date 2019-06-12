@@ -22,9 +22,6 @@ a:hover {
     width: 54px;
     height: 54px;
 }
-.font-quicksand {
-    font-family: 'Quicksand', sans-serif;
-}
 .dark {
     background-color: #010101;
 }
@@ -42,12 +39,6 @@ a:hover {
 .small-img {
     width: 2.7rem;
     height: 2.7rem;
-}
-.font-pacifico {
-    font-family: 'Pacifico', sans-serif;
-}
-.font-oxygen {
-    font-family: 'Oxygen', sans-serif;
 }
 .title {
     font-size: 1.5em;

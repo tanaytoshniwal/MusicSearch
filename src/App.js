@@ -1,43 +1,11 @@
 import React from 'react';
 import './App.css';
-import styles from './App.module.css';
+import Modal from 'react-modal'
 import Head from './components/Head';
 import axios from 'axios';
+
+Modal.setAppElement('#root')
 class App extends React.Component {
-  sample = [{
-    artistId: 632781795,
-    artistName: "Alec Benjamin",
-    artistViewUrl: "https://music.apple.com/us/artist/alec-benjamin/632781795?uo=4",
-    artworkUrl30: "https://is5-ssl.mzstatic.com/image/thumb/Music128/v4/c2/66/5e/c2665ec4-d57c-a539-5133-22ee864ca6cb/source/30x30bb.jpg",
-    artworkUrl60: "https://is5-ssl.mzstatic.com/image/thumb/Music128/v4/c2/66/5e/c2665ec4-d57c-a539-5133-22ee864ca6cb/source/60x60bb.jpg",
-    artworkUrl100: "https://is5-ssl.mzstatic.com/image/thumb/Music128/v4/c2/66/5e/c2665ec4-d57c-a539-5133-22ee864ca6cb/source/100x100bb.jpg",
-    collectionCensoredName: "Narrated for You",
-    collectionExplicitness: "notExplicit",
-    collectionId: 1441728723,
-    collectionName: "Narrated for You",
-    collectionPrice: 6.99,
-    collectionViewUrl: "https://music.apple.com/us/album/let-me-down-slowly/1441728723?i=1441728727&uo=4",
-    country: "USA",
-    currency: "USD",
-    discCount: 1,
-    discNumber: 1,
-    isStreamable: true,
-    kind: "song",
-    previewUrl: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview128/v4/7a/bb/98/7abb9819-cf0b-4fa2-aef9-437dcccfc5a6/mzaf_9015580018185674188.plus.aac.p.m4a",
-    primaryGenreName: "Pop",
-    releaseDate: "2018-05-25T07:00:00Z",
-    trackCensoredName: "Let Me Down Slowly",
-    trackCount: 12,
-    trackExplicitness: "notExplicit",
-    trackId: 1441728727,
-    trackName: "Let Me Down Slowly",
-    trackNumber: 4,
-    trackPrice: 1.29,
-    trackTimeMillis: 169354,
-    trackViewUrl: "https://music.apple.com/us/album/let-me-down-slowly/1441728723?i=1441728727&uo=4",
-    wrapperType: "track",
-    _id: 1
-  }]
   keyChange = (event)=>{
     this.setState({
       keyword : event.target.value
@@ -45,26 +13,52 @@ class App extends React.Component {
   }
   hit_api = (props) => {
     if(props.length > 0){
+      this.setState({
+        progress: true
+      })
       axios.post(`https://itunes.apple.com/search?term=${props.replace(" ", "+")}`).then(res => {
         // console.log(res.data.results);
         res.data.results.map((x, index) => {x._id = index+1})
         this.setState({
-          data : res.data.results
+          data : res.data.results,
+          progress: false
         })
       })
     }
+  }
+  lyrics = (props) => {
+    this.setState({
+      progress: true
+    })
+    axios.get(`https://api.lyrics.ovh/v1/${props.artist}/${props.name}`).then(res => {
+      console.log(res.data.lyrics)
+
+      this.setState({
+        song: props.name,
+        lyrics: res.data.lyrics,
+        modalIsOpen: true,
+        progress: false
+      });
+    })
+  }
+  closeModal = () => {
+    this.setState({modalIsOpen: false});
   }
   constructor(){
     super()
     this.state = {
       data: [],
-      keyword: ''
+      keyword: '',
+      progress: false,
+      song: '',
+      lyrics: '',
+      modalIsOpen: false
     }
   }
   render(){
     return (
       <div>
-        <Head api={this.hit_api} keyword={this.state.keyword} key_change={this.keyChange} data={this.state.data}/>
+        <Head api={this.hit_api} song={{song: this.state.song, lyrics: this.state.lyrics}} closeModal={this.closeModal} modal={this.state.modalIsOpen} lyrics={this.lyrics} keyword={this.state.keyword} bar={this.state.progress} key_change={this.keyChange} data={this.state.data} />
       </div>
     );
   }

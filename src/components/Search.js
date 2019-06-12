@@ -1,8 +1,13 @@
 import React from 'react'
-import {Textfield} from 'react-mdl';
+import {Textfield, ProgressBar} from 'react-mdl';
+import './Search.css'
 function Search(props) {
+    let bar = (props.bar)?<ProgressBar indeterminate className="progress" />:''
     return (
         <div>
+            <div className="row justify-content-center m-0">
+                {bar}
+            </div>
             <div className="row justify-content-center mt-4">
                 <Textfield onChange={props.key_change} label="Search Music" value={props.keyword} floatingLabel/>
             </div>

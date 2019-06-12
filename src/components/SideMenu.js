@@ -1,14 +1,15 @@
 import React from 'react'
 import './SideMenu.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faIdBadge } from '@fortawesome/free-solid-svg-icons'
+import { faIdBadge, faMailBulk } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faTwitter, faLinkedin, faMedium, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
 function SideMenu() {
     return (
         <div>
             <nav id="main-menu" className="mdl-navigation pt-0">
           <div className="container justify-content-center navbg p-0">
               <div className="row justify-content-center p-2">
-                  <img src="https://tanaytoshniwal.me/assets/images/icon_favo.jpg" alt="image" className="img-fluid avatar avatar-xxl depth" />
+                  <img src="https://tanaytoshniwal.me/assets/images/icon_favo.jpg" alt="tanay toshniwal" className="img-fluid avatar avatar-xxl depth" />
               </div>
               <div className="row justify-content-center my-2">
                   <span className="title text-center font-pacifico">Tanay Toshniwal</span>
@@ -16,7 +17,7 @@ function SideMenu() {
           </div>
           <div className="container-fluid p-1">
               <ul className="list-group mt-md-4">
-                  <a tabIndex="-1" href="http://tanaytoshniwal.me" target="_blank" className="remove-decoration">
+                  <a tabIndex="-1" href="http://tanaytoshniwal.me" rel="noopener noreferrer" target="_blank" className="remove-decoration">
                       <li className="list-group-item bg-transparent nav-item ">
                           <span className="font-oxygen nav-span black">
                             <FontAwesomeIcon icon={faIdBadge}/>
@@ -24,58 +25,58 @@ function SideMenu() {
                           </span>
                       </li>
                   </a>
-                  <a tabIndex="-1" href="https://github.com/tanaytoshniwal" target="_blank" className="remove-decoration">
+                  <a tabIndex="-1" href="https://github.com/tanaytoshniwal" rel="noopener noreferrer" target="_blank" className="remove-decoration">
                       <li className="list-group-item bg-transparent nav-item ">
                           <span className="font-oxygen nav-span black">
-                            <FontAwesomeIcon icon={faIdBadge}/>
+                            <FontAwesomeIcon icon={faGithub}/>
                               <span className="text-right ml-md-5 ml-3">GitHub</span>
                           </span>
                       </li>
                   </a>
-                  <a tabIndex="-1" href="https://twitter.com/TanayToshniwal" target="_blank" className="remove-decoration">
+                  <a tabIndex="-1" href="https://twitter.com/TanayToshniwal" rel="noopener noreferrer" target="_blank" className="remove-decoration">
                       <li className="list-group-item bg-transparent nav-item ">
                           <span className="font-oxygen nav-span black">
-                            <FontAwesomeIcon icon={faIdBadge}/>
+                            <FontAwesomeIcon icon={faTwitter}/>
                               <span className="text-right ml-md-5 ml-3">Twitter</span>
                           </span>
                       </li>
                   </a>
-                  <a tabIndex="-1" href="https://www.linkedin.com/in/tanay-toshniwal/" target="_blank" className="remove-decoration">
+                  <a tabIndex="-1" href="https://www.linkedin.com/in/tanay-toshniwal/" rel="noopener noreferrer" target="_blank" className="remove-decoration">
                       <li className="list-group-item bg-transparent nav-item ">
                           <span className="font-oxygen nav-span black">
-                            <FontAwesomeIcon icon={faIdBadge}/>
+                            <FontAwesomeIcon icon={faLinkedin}/>
                               <span className="text-right ml-md-5 ml-3">Linked In</span>
                           </span>
                       </li>
                   </a>
-                  <a tabIndex="-1" href="https://medium.com/tanay-toshniwal" target="_blank" className="remove-decoration">
+                  <a tabIndex="-1" href="https://medium.com/tanay-toshniwal" rel="noopener noreferrer" target="_blank" className="remove-decoration">
                       <li className="list-group-item bg-transparent nav-item ">
                           <span className="font-oxygen nav-span black">
-                            <FontAwesomeIcon icon={faIdBadge}/>
+                            <FontAwesomeIcon icon={faMedium}/>
                               <span className="text-right ml-md-5 ml-3">Medium</span>
                           </span>
                       </li>
                   </a>
-                  <a tabIndex="-1" href="https://www.instagram.com/tanaytoshniwal/" target="_blank" className="remove-decoration">
+                  <a tabIndex="-1" href="https://www.instagram.com/tanaytoshniwal/" rel="noopener noreferrer" target="_blank" className="remove-decoration">
                       <li className="list-group-item bg-transparent nav-item ">
                           <span className="font-oxygen nav-span black">
-                            <FontAwesomeIcon icon={faIdBadge}/>
+                            <FontAwesomeIcon icon={faInstagram}/>
                               <span className="text-right ml-md-5 ml-3">Instagram</span>
                           </span>
                       </li>
                   </a>
-                  <a tabIndex="-1" href="https://www.facebook.com/tanay.toshniwal" target="_blank" className="remove-decoration">
+                  <a tabIndex="-1" href="https://www.facebook.com/tanay.toshniwal" rel="noopener noreferrer" target="_blank" className="remove-decoration">
                       <li className="list-group-item bg-transparent nav-item ">
                           <span className="font-oxygen nav-span black">
-                            <FontAwesomeIcon icon={faIdBadge}/>
+                            <FontAwesomeIcon icon={faFacebook}/>
                               <span className="text-right ml-md-5 ml-3">Facebook</span>
                           </span>
                       </li>
                   </a>
-                  <a tabIndex="-1" href="mailto:contact@tanaytoshniwal.com" target="_blank" className="remove-decoration">
+                  <a tabIndex="-1" href="mailto:contact@tanaytoshniwal.com" rel="noopener noreferrer" target="_blank" className="remove-decoration">
                       <li className="list-group-item bg-transparent nav-item ">
                           <span className="font-oxygen nav-span black">
-                            <FontAwesomeIcon icon={faIdBadge}/>
+                            <FontAwesomeIcon icon={faMailBulk}/>
                               <span className="text-right ml-md-5 ml-3">Contact</span>
                           </span>
                       </li>

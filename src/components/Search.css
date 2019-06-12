@@ -1,5 +1,5 @@
-.position {
-    padding-top: 3em;
-    margin-left: auto;
-    margin-right: auto;
+.progress{
+    height: 5px !important;
+    color: red !important;
+    width: 100% !important;
 }
