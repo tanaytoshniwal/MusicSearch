@@ -19,6 +19,7 @@ class App extends React.Component {
       axios.post(`https://itunes.apple.com/search?term=${props.replace(" ", "+")}`).then(res => {
         // console.log(res.data.results);
         res.data.results.map((x, index) => {x._id = index+1})
+        console.log(res.data)
         this.setState({
           data : res.data.results,
           progress: false
@@ -31,7 +32,7 @@ class App extends React.Component {
       progress: true
     })
     axios.get(`https://api.lyrics.ovh/v1/${props.artist}/${props.name}`).then(res => {
-      console.log(res.data.lyrics)
+      console.log(res.data)
 
       this.setState({
         song: props.name,
