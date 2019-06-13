@@ -12,7 +12,7 @@ function SideMenu() {
                   <img src="https://tanaytoshniwal.me/assets/images/icon_favo.jpg" alt="tanay toshniwal" className="img-fluid avatar avatar-xxl depth" />
               </div>
               <div className="row justify-content-center my-2">
-                  <span className="title text-center font-pacifico">Tanay Toshniwal</span>
+                  <span><strong className="title text-center font-pacifico">Tanay Toshniwal</strong></span>
               </div>
           </div>
           <div className="container-fluid p-1">
