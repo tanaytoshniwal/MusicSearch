@@ -8,3 +8,13 @@ body {
 code {
   font-family: 'Raleway', sans-serif !important;
 }
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: #010101;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(60, 60, 60);
+}

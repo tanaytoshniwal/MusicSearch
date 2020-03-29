@@ -1,3 +1,27 @@
 .full-width {
     width: 100%;
 }
+ul {
+    min-width: 100%;
+    display: inline !important;
+    list-style-type: none !important;
+}
+li {
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px;
+    display: inline !important;
+    border-radius: 25%;
+    border: 1px solid rgb(24, 24, 24);
+}
+li a {
+    nav-index: -1 !important;
+    text-decoration: unset !important;
+}
+.ant-pagination-item-active {
+    color: blue;
+    border-color: blue;
+}
+.ant-pagination-jump-next, .ant-pagination-jump-prev {
+    display: none !important;
+}

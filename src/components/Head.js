@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, Header, Drawer, Content, FooterSection, FooterLinkList, Footer } from 'react-mdl';
+import { Layout, Header, Drawer, Content, Footer } from 'react-mdl';
 import SideMenu from './SideMenu';
 import Search from './Search';
 import Cards from './Cards';
@@ -48,7 +48,7 @@ function Head(props) {
                         <FontAwesomeIcon icon={faCode} className="mx-2" /> 
                         with
                         <FontAwesomeIcon icon={faHeartbeat} className="mx-2 text-danger" />
-                        by <a href="https://tanaytoshniwal.me" target="_blank" style={{color: '#fff', textDecoration: 'none'}} className="mx-2 foot-text">Tanay Toshniwal</a>
+                        by <a href="https://tanaytoshniwal.me" rel="noopener noreferrer" target="_blank" style={{color: '#fff', textDecoration: 'none'}} className="mx-2 foot-text">Tanay Toshniwal</a>
                     </div>
                 </Footer>
             </Layout>

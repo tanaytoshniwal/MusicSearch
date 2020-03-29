@@ -1,8 +1,6 @@
 import React from 'react'
 import {Textfield, ProgressBar} from 'react-mdl';
 import './Search.css'
-import { CircularProgressbar } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
 
 function Search(props) {
     let bar = (props.bar)?<ProgressBar indeterminate className="progress" />:''
