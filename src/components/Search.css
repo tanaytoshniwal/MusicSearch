@@ -3,3 +3,6 @@
     color: red !important;
     width: 100% !important;
 }
+.progressContainer {
+    width: 50px;
+}

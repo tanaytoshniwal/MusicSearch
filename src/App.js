@@ -16,7 +16,7 @@ class App extends React.Component {
       this.setState({
         progress: true
       })
-      axios.post(`https://itunes.apple.com/search?term=${props.replace(" ", "+")}`).then(res => {
+      axios.post(`https://itunes.apple.com/search?term=${props.replace(" ", "+")}&limit=200`).then(res => {
         // console.log(res.data.results);
         res.data.results.map((x, index) => {x._id = index+1})
         console.log(res.data)
@@ -59,7 +59,16 @@ class App extends React.Component {
   render(){
     return (
       <div>
-        <Head api={this.hit_api} song={{song: this.state.song, lyrics: this.state.lyrics}} closeModal={this.closeModal} modal={this.state.modalIsOpen} lyrics={this.lyrics} keyword={this.state.keyword} bar={this.state.progress} key_change={this.keyChange} data={this.state.data} />
+        <Head 
+          api={this.hit_api} 
+          song={{song: this.state.song, lyrics: this.state.lyrics}} 
+          closeModal={this.closeModal} 
+          modal={this.state.modalIsOpen} 
+          lyrics={this.lyrics} 
+          keyword={this.state.keyword} 
+          bar={this.state.progress} 
+          key_change={this.keyChange} 
+          data={this.state.data} />
       </div>
     );
   }

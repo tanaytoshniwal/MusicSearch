@@ -9,7 +9,7 @@ function SideMenu() {
             <nav id="main-menu" className="mdl-navigation pt-0">
           <div className="container justify-content-center navbg p-0">
               <div className="row justify-content-center p-2">
-                  <img src="https://tanaytoshniwal.me/assets/images/icon_favo.jpg" alt="tanay toshniwal" className="img-fluid avatar avatar-xxl depth" />
+                  <img src="https://tanaytoshniwal.me/assets/images/metest.jpg" alt="tanay toshniwal" className="img-fluid avatar avatar-xxl depth" />
               </div>
               <div className="row justify-content-center my-2">
                   <span><strong className="title text-center font-pacifico">Tanay Toshniwal</strong></span>

@@ -2,3 +2,9 @@
     z-index: 9;
     background-color: rgba(210, 210, 210, .075) !important;
 }
+.footer {
+    min-width: 100%;
+}
+.foot-text:hover {
+    text-decoration: underline !important;
+}

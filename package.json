@@ -12,6 +12,8 @@
     "bootstrap": "^4.3.1",
     "react": "^16.8.6",
     "react-animated-css": "^1.2.1",
+    "react-bootstrap": "^0.32.4",
+    "react-circular-progressbar": "^2.0.3",
     "react-dom": "^16.8.6",
     "react-mdl": "^1.11.0",
     "react-modal": "^3.8.1",
